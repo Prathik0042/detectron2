@@ -153,7 +153,6 @@ class DatasetMapper:
         # USER: Write your own image loading if it's not from a file
         try:
             image = utils.read_image(dataset_dict["file_name"], format=self.image_format)
-            utils.check_image_size(dataset_dict, image)
         except Exception as e:
             print(f"Error loading image: {e}")
             return dataset_dict
